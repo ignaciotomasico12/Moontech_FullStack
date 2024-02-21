@@ -8,13 +8,9 @@
   CRUD App with Node JS and Next JS for Moontech FullStak Task
 </p>
 
-<p align="left">
-  En la pantalla princial se muestran todos los usuarios, en el avatar que hay en el header a la derecha, podemos acceder tanto a los usuarios, a los logs de sesión y a la opcion de cerrar sesión
-</p>
-
 ## 👨 Users
 
-All users created in the app use the same password: '1234'
+All users created in the app use the same password: '1234' <br/>
 Users available to log in the App:
 
 <ul>
