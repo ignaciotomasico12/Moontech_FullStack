@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="frontend/public/logos/logo.svg" width="150" />
+  <img alt="Logo" src="public/logos/logo.svg" width="150" />
 </div>
 <h1 align="center">
   Moontech - FullStack
