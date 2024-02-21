@@ -1,7 +1,6 @@
 import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { emailLogin } from "@/services/auth";
+import { emailLogin, emailLogout } from "@/services/auth";
 
 export const authOptions = {
   callbacks: {
@@ -9,7 +8,7 @@ export const authOptions = {
       if (credentials) {
         const login = await emailLogin(credentials.email, credentials.password);
         if (login) {
-          user.id = login.data.id;
+          user.id = login.data._id;
           user.firstName = login.data.firstName;
           user.lastName = login.data.lastName;
           user.name = login.data.firstName + " " + login.data.lastName;
@@ -53,6 +52,12 @@ export const authOptions = {
         session.user.image = null;
       }
       return session;
+    },
+  },
+  events: {
+    async signOut(message) {
+      const token = message.token;
+      await emailLogout(token);
     },
   },
 };

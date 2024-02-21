@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const db = require('../database/conn.js');
 const { ObjectId } = require('mongodb');

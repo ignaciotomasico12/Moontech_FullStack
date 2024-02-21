@@ -12,6 +12,32 @@ import Link from 'next/link'
 export default function Header() {
   const { data: session } = useSession();
 
+  const links = [
+    {
+      title: 'Usuarios',
+      href: '/usuarios',
+      route: '/usuarios',
+      icon: UsersIcon
+    },
+    {
+      title: 'Logs de Sesiones',
+      href: '/logs',
+      route: '/logs',
+      icon: DocumentIcon
+    }
+  ]
+
+  const NavLink = (props) => {
+    return (
+      <Link href={props.href}>
+        <HStack align={'center'} color={'black.900'} _hover={{ color: 'primary.500' }}>
+          <props.icon w={18} h={18}/>
+          <Text variant={'menuItem'} color={'inherit'}>{props.title}</Text>
+        </HStack>
+      </Link>
+    )
+  }
+
   return (
     <header>
       <Box bg={'white.900'} px={4} py={1} borderBottom={'1px solid'} 
@@ -24,6 +50,14 @@ export default function Header() {
           
           <Flex alignItems={'center'} gap={4} display={{ base: 'none', md: 'flex' }}>
             <HStack as={'nav'} spacing={4}>
+              {links && links.map((link, index) => (
+                <NavLink 
+                  key={index} 
+                  title={link.title}
+                  href={link.href}
+                  icon={link.icon}
+                />
+              ))}
               {!session &&
                 <Button variant={'primary'} onClick={() => signIn()}>Iniciar sesión</Button>
               }
@@ -40,22 +74,6 @@ export default function Header() {
                     <Text color={'grey.700'} fontSize={14}>{session?.user?.name}</Text>
                     <Text color={'grey.700'} fontSize={12}>{session?.user?.email}</Text>
                   </VStack>
-                  <MenuItem bg={'white.900'} _hover={{ backgroundColor: 'primary.100', color: 'primary.500' }}>
-                    <Link href={`/usuarios`}>
-                      <HStack spacing={2}>
-                        <UsersIcon w={18} h={18}/>
-                        <Text variant={'subMenuItem'} color={'inherit'}>Usuarios Registrados</Text>
-                      </HStack>
-                    </Link>
-                  </MenuItem>
-                  <MenuItem bg={'white.900'} _hover={{ backgroundColor: 'primary.100', color: 'primary.500' }}>
-                    <Link href={`/logs`}>
-                      <HStack spacing={2}>
-                        <DocumentIcon w={18} h={18}/>
-                        <Text variant={'subMenuItem'} color={'inherit'}>Logs de sesiones</Text>
-                      </HStack>
-                    </Link>
-                  </MenuItem>
                   <MenuDivider />
                   <MenuItem bg={'white.900'} _hover={{ backgroundColor: 'error.100', color: 'error.500' }} onClick={() => signOut()}>
                     <HStack spacing={2}>

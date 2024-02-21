@@ -17,9 +17,17 @@ export async function emailLogin(email, password) {
 
 export async function emailRegister(data) {
     try {
-        const request = await axios.post(`${API_URL}/auth/register`, {
-            data
-        });
+        const request = await axios.post(`${API_URL}/auth/register`, {data});
+        return request;
+    } catch (error) {
+        console.error(error);
+        return error
+    }
+}
+
+export async function emailLogout(data) {
+    try {
+        const request = await axios.post(`${API_URL}/auth/logout`, {data});
         return request;
     } catch (error) {
         console.error(error);

@@ -2,6 +2,7 @@ const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const db = require('../database/conn');
+const { ObjectId } = require('mongodb');
 require('dotenv').config();
 
 const controller = {};
@@ -67,6 +68,12 @@ controller.login = (req, res) => {
             if (bcrypt.compareSync(data.password, user.password)){
                 console.log(`-- ✅ \u001b[32mUser ${data.email} exists on Data Base\u001b[37m --`);
                 const access_token = createToken(data.email, data.password, user.role)
+                const logSession = await connection.collection('logs').insertOne({userId: user._id, userEmail: user.email, date: new Date(), login: true});
+                if (logSession.acknowledged){
+                    console.log(`-- ✅ \u001b[32mLog session created\u001b[37m --`);
+                } else {
+                    console.log(`-- ❌ \u001b[31mError creating log session\u001b[37m --`);
+                }
                 res.status(200).json({...user, access_token})
             } else {
                 console.log(`-- ❌ \u001b[31mWrong password\u001b[37m --`);
@@ -75,6 +82,24 @@ controller.login = (req, res) => {
         } else {
             console.log(`-- ❌ \u001b[31mCould not found user\u001b[37m --`);
             res.status(401).json({status: 401, message: 'User not found'});
+        }
+    }).catch(error => {
+        console.error('Error al conectar a la base de datos:', error);
+    });
+};
+
+controller.logout = (req, res) => {
+    const data = req.body.data
+    console.log(`-- 🔄️ Logging out user ${data.email} ... --`);
+    db.conectarDB().then(async () => {
+        const connection = db.getDB();
+        const logSession = await connection.collection('logs').insertOne({userId: new ObjectId(data.id), userEmail: data.email, date: new Date(), login: false});
+        if (logSession.acknowledged){
+            console.log(`-- ✅ \u001b[32mLog session created\u001b[37m --`);
+            res.status(200).json({status: 200, message: 'User logged out'})
+        } else {
+            console.log(`-- ❌ \u001b[31mError creating log session\u001b[37m --`);
+            res.status(500).json({status: 500, message: 'Error creating log session'})
         }
     }).catch(error => {
         console.error('Error al conectar a la base de datos:', error);

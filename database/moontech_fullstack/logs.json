@@ -1,0 +1,105 @@
+{
+    "_id" : ObjectId("65d5bce3be87091888ea6f48"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:05:39.043+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5be57beba692e63118c6d"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:11:51.273+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5be57beba692e63118c6e"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:11:51.338+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf04beba692e63118c6f"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:14:44.332+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf04beba692e63118c70"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:14:44.390+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf75beba692e63118c71"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:16:37.363+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf75beba692e63118c72"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:16:37.420+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf9bbeba692e63118c73"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:17:15.235+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5bf9bbeba692e63118c74"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:17:15.293+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5c009bc4ad0f77755a6f7"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:19:05.662+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5c009bc4ad0f77755a6f8"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:19:05.725+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5c00fbc4ad0f77755a6f9"),
+    "userId" : null,
+    "userEmail" : null,
+    "date" : ISODate("2024-02-21T09:19:11.596+0000"),
+    "login" : false
+}
+{
+    "_id" : ObjectId("65d5c06365da8016090e572f"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:20:35.766+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5c06365da8016090e5730"),
+    "userId" : ObjectId("65d5a715f5243c7977c670d8"),
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:20:35.830+0000"),
+    "login" : true
+}
+{
+    "_id" : ObjectId("65d5c07165da8016090e5731"),
+    "userId" : "65d5a715f5243c7977c670d8",
+    "userEmail" : "ignaciotomasico12@gmail.com",
+    "date" : ISODate("2024-02-21T09:20:49.511+0000"),
+    "login" : false
+}

@@ -6,12 +6,11 @@ require('dotenv').config();
 
 // Environment variables //
 const PORT = process.env.NODE_PORT;
-const DB_HOST = process.env.DB_HOST;
-const DB_NAME = process.env.DB_NAME;
 
 // Importing routes //
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
+const logsRoutes = require('./routes/logs');
 
 // Settings //
 app.set('port', PORT || 3333);
@@ -29,9 +28,10 @@ app.use(morgan('dev'));
 // Routes //
 app.use('/', userRoutes);
 app.use('/', authRoutes);
+app.use('/', logsRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Express on Vercel");
+    res.json({ message: "Welcome to the API" });
 });
 
 // Starting the server //

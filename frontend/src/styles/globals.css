@@ -30,14 +30,14 @@ header{
 
 header .nav_content{
   width: 100%;
-  max-width: 1750px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0px 9999px #F8F6F2;
   font-size: 14px;
-  border: 0px solid #F29D16;
+  border: 0px solid #082F5E;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -49,14 +49,14 @@ input:autofill {
 
 input:-webkit-autofill:focus {
   -webkit-box-shadow: inset 0 0 0px 9999px #F8F6F2;
-  border: 1px solid #F29D16;
+  border: 1px solid #082F5E;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
 }
 
 input:autofill:focus {
   box-shadow: inset 0 0 0px 9999px #F8F6F2;
-  border: 1px solid #F29D16;
+  border: 1px solid #082F5E;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
 }

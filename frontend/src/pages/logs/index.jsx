@@ -1,28 +1,27 @@
 import React from "react";
 import { 
-    Flex, Breadcrumb, Button, BreadcrumbItem, BreadcrumbLink
+    Flex, Breadcrumb, BreadcrumbItem, BreadcrumbLink
 } from "@chakra-ui/react";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from "next/router";
-import { AddSquareIcon, ChevronRightIcon } from '@/components/assets/icons';
-import { getAllUsers } from "@/services/users";
-import UsersTable from "@/components/users/usersTable";
+import { ChevronRightIcon } from '@/components/assets/icons';
+import { getAllLogs } from "@/services/logs";
+import LogsTable from "@/components/logs/logsTable";
 import NextLink from "next/link";
 import Layout from '@/components/layout/layout'
 import SEO from '@/next-seo.config';
 
 
-const UsersPage = ({ users }) => {
+const LogsPage = ({ logs }) => {
     const router = useRouter();
-
     return (
         <>
             <DefaultSeo 
                 {...SEO}
-                title='Todos los usuarios'
-                description='Administración de todos los usuarios registrados en la plataforma'
+                title='Todos los logs'
+                description='Administración de todos los logs de inicios de sesión registrados en la plataforma'
                 canonical={process.env.NEXT_PUBLIC_SITE_URL + router.pathname}
             />
             <Layout>
@@ -32,36 +31,32 @@ const UsersPage = ({ users }) => {
                             <BreadcrumbLink as={NextLink} href='/' _hover={{textDecoration: 'none', color:'primary.500'}}>Inicio</BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbItem isCurrentPage>
-                            <BreadcrumbLink>Usuarios</BreadcrumbLink>
+                            <BreadcrumbLink>Logs</BreadcrumbLink>
                         </BreadcrumbItem>
                     </Breadcrumb>
-                    <Button variant='primary' as={NextLink} href='/usuarios/nuevo-usuario' gap={3}>
-                        <AddSquareIcon w={20} h={20} />
-                        Nuevo Usuario
-                    </Button>
                 </Flex>
-                <UsersTable users={users} />
+                <LogsTable logs={logs} />
             </Layout>
         </>
     );
 };
 
-export default UsersPage;
+export default LogsPage;
 
 export async function getServerSideProps(context) {
   const session = await getServerSession(context.req, context.res, authOptions);
   if (session) {
     try {
-        const users = await getAllUsers(session.jwt);
+        const logs = await getAllLogs(session.jwt);
         return {
             props: {
-                users: users?.data,
+                logs: logs?.data,
             },
         };
     } catch (error) {
         return {
             props: {
-                users: [],
+                logs: [],
             },
         };
     }

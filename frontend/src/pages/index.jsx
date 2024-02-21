@@ -30,6 +30,10 @@ export async function getServerSideProps(context) {
   } else {
     return {
       props: { session },
+      redirect: {
+        destination: "/usuarios",
+        permanent: false,
+      },
     };
   }
 }
