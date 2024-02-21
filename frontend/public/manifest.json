@@ -1,0 +1,11 @@
+{
+    "name": "Moontech_FullStack",
+    "short_name": "Moontech",
+    "theme_color": "#082F5E",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "splash_pages": null
+  }

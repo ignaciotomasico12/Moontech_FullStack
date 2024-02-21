@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+main{
+  max-width: 1750px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: 65px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header .nav_content{
+  width: 100%;
+  max-width: 1750px;
+  margin: 0 auto;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px #F8F6F2;
+  font-size: 14px;
+  border: 0px solid #F29D16;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:autofill {
+  box-shadow: inset 0 0 0px 9999px #F8F6F2;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 0 0px 9999px #F8F6F2;
+  border: 1px solid #F29D16;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:autofill:focus {
+  box-shadow: inset 0 0 0px 9999px #F8F6F2;
+  border: 1px solid #F29D16;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
