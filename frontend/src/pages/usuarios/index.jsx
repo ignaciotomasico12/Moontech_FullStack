@@ -26,7 +26,7 @@ const UsersPage = ({ users }) => {
                 canonical={process.env.NEXT_PUBLIC_SITE_URL + router.pathname}
             />
             <Layout>
-                <Flex flexDirection={['column', 'row']} justifyContent='space-between' gap={4} p={0}>
+                <Flex flexDirection={'row'} justifyContent='space-between' gap={4}>
                     <Breadcrumb separator={<ChevronRightIcon w={16} h={16}/>}>
                         <BreadcrumbItem>
                             <BreadcrumbLink as={NextLink} href='/' _hover={{textDecoration: 'none', color:'primary.500'}}>Inicio</BreadcrumbLink>

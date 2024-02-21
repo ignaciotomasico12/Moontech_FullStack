@@ -20,7 +20,7 @@ export default function Header() {
       icon: UsersIcon
     },
     {
-      title: 'Logs de Sesiones',
+      title: 'Logs',
       href: '/logs',
       route: '/logs',
       icon: DocumentIcon
@@ -48,7 +48,7 @@ export default function Header() {
             <Logo width={130} height={70} />
           </Link>
           
-          <Flex alignItems={'center'} gap={4} display={{ base: 'none', md: 'flex' }}>
+          <Flex alignItems={'center'} gap={4}>
             <HStack as={'nav'} spacing={4}>
               {links && links.map((link, index) => (
                 <NavLink 

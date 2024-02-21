@@ -55,11 +55,11 @@ export default function UserCreateForm() {
             <Box bgColor={colorMode === 'light' ? "white.900" : 'grey.500'} p={5}
                 borderWidth={0} borderRadius="md"
                 boxShadow={colorMode === 'light' ? "sm" : 'none'}
-                w={{base: 'calc(100% - 2.5rem)', lg: 'full'}} mt={8}
+                w={{base: '100%', lg: 'full'}} mt={8}
             >
                 <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                     <Stack spacing={5}>
-                        <Flex w='full' justifyContent='space-between' gap={6}>
+                        <Flex w='full' justifyContent='space-between' gap={6} flexDirection={['column', 'row']}>
                             <FormControl display={'flex'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'left'} gap={2}>
                                 <FormLabel m={0} p={0}>Nombre</FormLabel>
                                 <Input type='text' variant='ghost' placeholder="Jhon" {...register('firstName')}/>
@@ -69,7 +69,7 @@ export default function UserCreateForm() {
                                 <Input type='text' variant='ghost' placeholder="Doe" {...register('lastName')}/>
                             </FormControl>
                         </Flex>
-                        <Flex w='full' justifyContent='space-between' gap={6}>
+                        <Flex w='full' justifyContent='space-between' gap={6} flexDirection={['column', 'row']}>
                             <FormControl display={'flex'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'left'} gap={2}>
                                 <FormLabel m={0} p={0}>Email</FormLabel>
                                 <Input type='text' variant='ghost' placeholder="jhondoe@gmail.com" {...register('email')}/>
@@ -84,7 +84,7 @@ export default function UserCreateForm() {
                                 />
                             </FormControl>
                         </Flex>
-                        <Flex w='full' justifyContent='space-between' gap={6}>
+                        <Flex w='full' justifyContent='space-between' gap={6} flexDirection={['column', 'row']}>
                             <FormControl display={'flex'} flexDirection={'column'} justifyContent={'space-between'} alignItems={'left'} gap={2}>
                                 <FormLabel m={0} p={0}>Contraseña</FormLabel>
                                 <Input type='password' variant='ghost' {...register('password')}/>
@@ -94,7 +94,9 @@ export default function UserCreateForm() {
                                 <Input type='password' variant='ghost' {...register('r-password')}/>
                             </FormControl>
                         </Flex>
-                        <Button mt={10} mb={5} variant='primary' type='submit' isLoading={loading} loadingText='Creando...'>
+                        <Button mt={10} mb={5} variant='primary' type='submit' isLoading={loading} loadingText='Creando...'
+                            w={{base: '100%', lg: 'fit-content', md: 'fit-content', xl: 'fit-content'}}
+                        >
                             Crear
                         </Button>
                     </Stack>
