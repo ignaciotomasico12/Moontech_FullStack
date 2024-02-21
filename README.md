@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://cdn.sanity.io/images/cdt3inaw/develop/0abd084da49ed2e65e37684648c538e474c25f78-515x515.png" width="100" />
+  <img alt="Logo" src="frontend/public/logos/logo.svg" width="150" />
 </div>
 <h1 align="center">
   Moontech - FullStack
@@ -7,8 +7,6 @@
 <p align="center">
   CRUD App with Node JS and Next JS for Moontech FullStak Task
 </p>
-
-![demo](https://cdn.sanity.io/images/cdt3inaw/develop/7ead6b4b225898e28b34a6c43798e90f503c9cd9-1849x902.png)
 
 ## 👨 Users
 
@@ -51,7 +49,16 @@ Users available to log in the App:
    npm install
    ```
 
-4. Start the project
+4. Install the global dependencies
+    
+    Rename the .env.template files in the backend and frontend folders to .env
+
+5. Import the database
+
+    The database is in the database folder in the root folder. Is stored in two formats choose whatever suits you better.
+    The database url in localhost, must be "localhost:27017" if changed remember to change it also on the .env file of the backend folder
+
+6. Start the project
 
     Run this command in the root folder
 
