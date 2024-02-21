@@ -1,0 +1,72 @@
+{
+    "_id" : ObjectId("65d5a715f5243c7977c670d8"),
+    "firstName" : "Ignacio",
+    "lastName" : "Tomás Floría",
+    "email" : "ignaciotomasico12@gmail.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "createDate" : ISODate("2024-02-21T07:32:37.692+0000"),
+    "active" : true
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2db5"),
+    "firstName" : "Washington",
+    "lastName" : "May",
+    "email" : "washingtonmay@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : true,
+    "createDate" : "2024-02-18T04:19:00 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2db6"),
+    "firstName" : "Conley",
+    "lastName" : "Roth",
+    "email" : "conleyroth@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : true,
+    "createDate" : "2024-02-19T10:33:45 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2db7"),
+    "firstName" : "Molina",
+    "lastName" : "Harrington",
+    "email" : "molinaharrington@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : false,
+    "createDate" : "2024-02-10T08:21:08 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2db8"),
+    "firstName" : "Moreno",
+    "lastName" : "Merritt",
+    "email" : "morenomerritt@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : true,
+    "createDate" : "2024-02-08T10:46:26 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2db9"),
+    "firstName" : "Kari",
+    "lastName" : "Mitchell",
+    "email" : "karimitchell@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : true,
+    "createDate" : "2024-02-19T08:57:05 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2dba"),
+    "firstName" : "Margret",
+    "lastName" : "Gamble",
+    "email" : "margretgamble@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : false,
+    "createDate" : "2024-02-12T05:52:38 -01:00"
+}
+{
+    "_id" : ObjectId("65d5a8667efae3fa5dda2dbb"),
+    "firstName" : "Millie",
+    "lastName" : "Marshall",
+    "email" : "milliemarshall@orboid.com",
+    "password" : "$2b$10$Zzr0oXe3KYfNFuDNTZua1.8GIKf0FZZyJGgy0OJQqaKh51ZBiJWKa",
+    "active" : true,
+    "createDate" : "2024-02-21T05:54:55 -01:00"
+}
