@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://cdn.sanity.io/images/cdt3inaw/develop/0abd084da49ed2e65e37684648c538e474c25f78-515x515.png" width="100" />
+  <img alt="Logo" src="frontend/public/logos/logo.svg" width="150" />
 </div>
 <h1 align="center">
   Moontech - FullStack
@@ -7,8 +7,6 @@
 <p align="center">
   CRUD App with Node JS and Next JS for Moontech FullStak Task
 </p>
-
-![demo](https://cdn.sanity.io/images/cdt3inaw/develop/7ead6b4b225898e28b34a6c43798e90f503c9cd9-1849x902.png)
 
 ## 👨 Users
 
