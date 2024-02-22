@@ -41,8 +41,6 @@ controller.getById = (req, res) => {
 controller.create = async (req, res) => {
     try {
         const data = req.body;
-        const id = uuidv4();
-        data.id = id;
 
         const hashedPassword = bcrypt.hashSync(data.password, 10);
         data.password = hashedPassword;
