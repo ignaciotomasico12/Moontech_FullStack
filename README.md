@@ -56,7 +56,8 @@ Users available to log in the App:
 5. Import the database
 
     The database is in the database folder in the root folder. Is stored in two formats choose whatever suits you better.
-    The database url in localhost, must be "localhost:27017" if changed remember to change it also on the .env file of the backend folder
+    To import the full database use the file named "moontech_fullstack.agz"
+    The database url in localhost, must be "mongodb://localhost:27017" and the database name is "moontech_fullstack" if changed remember to change it also on the .env file of the backend folder
 
 6. Start the project
 
