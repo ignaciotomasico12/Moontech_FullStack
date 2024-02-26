@@ -5,7 +5,7 @@ const controller = {};
 controller.getAll = (req, res) => {
     db.conectarDB().then(async () => {
         const connection = db.getDB();
-        const logs = await connection.collection('logs').find().toArray();
+        const logs = await connection.collection('logs').find().sort({date: -1}).toArray();
         if (logs.length === 0) {
             console.log(`-- ❌ \u001b[31mCould not found logs\u001b[37m --`);
             res.status(404).json({status: 404, message: 'Logs not found'});

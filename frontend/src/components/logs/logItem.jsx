@@ -63,6 +63,11 @@ export default function LogItem({log}) {
                     {log?.userEmail}
                 </Td>
                 <Td borderColor={colorMode === 'light' ? 'grey.200' : 'grey.300'}
+                    paddingInlineEnd={1} paddingInlineStart={1}
+                >
+                    {new Date(log?.date).toLocaleString()}
+                </Td>
+                <Td borderColor={colorMode === 'light' ? 'grey.200' : 'grey.300'}
                     paddingInlineEnd={1} paddingInlineStart={1} color={log?.login ? 'success.500' : 'error.500'}
                 >
                     {log?.login ? 'Login' : 'Logout'}

@@ -11,6 +11,7 @@ export default function LogsTable({logs}) {
                     <Tr>
                         <Th paddingInlineEnd={1} paddingInlineStart={1} fontSize={'sm'}>#ID</Th>
                         <Th paddingInlineEnd={1} paddingInlineStart={1} fontSize={'sm'}>Usuario</Th>
+                        <Th paddingInlineEnd={1} paddingInlineStart={1} fontSize={'sm'}>Fecha y Hora</Th>
                         <Th paddingInlineEnd={1} paddingInlineStart={1} fontSize={'sm'}>Tipo login</Th>
                     </Tr>
                 </Thead>
